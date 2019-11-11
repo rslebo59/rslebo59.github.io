@@ -58,6 +58,23 @@ header.sticky-header {
 	margin: 2.5%;
 }
 
+.portfolio-items__item:hover h2 {
+	transform: translateY(0);
+}
+
+.portfolio-items__item:hover .logo {
+	transform: translateY(500px);
+}
+
+.portfolio-items__item:hover a {
+	transform: scale3d(1, 1, 1);
+	transition: transform 200ms ease 500ms, box-shadow 100ms ease;
+}
+
+.portfolio-items__item:hover .shade-overlay {
+	opacity: 0;
+}
+
 .portfolio-items__item h2 {
 	color: #fff;
 	z-index: 3;

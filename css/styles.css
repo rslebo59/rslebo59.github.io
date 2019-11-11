@@ -1,3 +1,11 @@
+body {
+	padding-top: 54px;
+	background-color: #000;
+	background-image: url(images/body-background.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
 header.sticky-header {
 	position: fixed;
 	top: 0;

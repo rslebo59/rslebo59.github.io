@@ -1,0 +1,37 @@
+{
+  "name": "rslebo59.github.io",
+  "version": "1.0.0",
+  "description": "Simple Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rslebo59/rslebo59.github.io.git"
+  },
+  "author": "Ryan Lebo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rslebo59/rslebo59.github.io/issues"
+  },
+  "homepage": "https://github.com/rslebo59/rslebo59.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "autoprefixer": "^9.7.6",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-using": "^0.1.1",
+    "gulp-util": "^3.0.8"
+  },
+  "dependencies": {}
+}

@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/rslebo59/rslebo59.github.io#readme",
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "autoprefixer": "^9.7.6",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "autoprefixer": "^9.8.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -33,5 +33,7 @@
     "gulp-using": "^0.1.1",
     "gulp-util": "^3.0.8"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-concat": "^2.6.1"
+  }
 }

@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 var babel = require('gulp-babel');
+var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
@@ -29,7 +30,7 @@ var sassFiles = {
 };
 var jsFiles = {
     src : './assets/js/*.js',
-    dist : './assets/js/',
+    dist : './assets/js/min',
     watch : [ './assets/js/*.js' ]
 };
 
@@ -72,6 +73,7 @@ var jsTask = function( compressed ) {
             presets: ['@babel/preset-env']
         }))
         .on('error', gutil.log)
+        .pipe(concat('main.js'))
         .pipe( uglify({
             output: {
                 beautify: compressed

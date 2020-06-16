@@ -29,7 +29,12 @@ var sassFiles = {
     watch : [ './assets/sass/*.scss', './assets/sass/**/*.scss' ]
 };
 var jsFiles = {
-    src : './assets/js/*.js',
+    src : [ './assets/js/*.js', '.assets/js/plugins/*.js'],
+    dist : './assets/js/min',
+    watch : [ './assets/js/*.js' ]
+};
+var gsapFiles = {
+    src : [ './assets/js/gsap/**.*.js', './assets/js/gsap/*.js', './assets/js/gsap/plugins/*.js' ],
     dist : './assets/js/min',
     watch : [ './assets/js/*.js' ]
 };
@@ -86,6 +91,25 @@ var jsTask = function( compressed ) {
         .pipe( gulp.dest( jsFiles.dist ) );
 };
 
+var gsapTask = function ( compressed ) {
+    return gulp.src( gsapFiles.src )
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
+        .on('error', gutil.log)
+        .pipe(concat('gsap.js'))
+        .pipe( uglify({
+            output: {
+                beautify: compressed
+            }
+        }) )
+        .pipe( rename({
+            suffix: '.min'
+        }) )
+        .on('error', gutil.log)
+        .pipe( gulp.dest( gsapFiles.dist ) );
+}
+
 
 /*************
 * SASS Tasks
@@ -115,6 +139,7 @@ gulp.task( 'uglify:dev', function(done) {
     var jsBeautify = true;
 
     jsTask( jsBeautify );
+    gsapTask( jsBeautify );
     done();
 }); // gulp uglify:dev
 
@@ -123,6 +148,7 @@ gulp.task( 'uglify:prod', function(done) {
     var jsBeautify = false;
 
     jsTask( jsBeautify );
+    gsapTask( jsBeautify );
     done();
 }); // gulp uglify:prod
 

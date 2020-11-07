@@ -33,8 +33,13 @@
                 border-radius: 5px;
             }
 
+            .syn-marquee-two:hover .marquee-elements {
+                animation-play-state: paused;
+            }
+
             .syn-marquee p,
-            .syn-marquee-two p {
+            .syn-marquee-two p,
+            .syn-marquee-three p {
                 position: relative;
                 font-family: Tahoma, Arial, sans-serif;
                 width: 100%;
@@ -42,15 +47,28 @@
                 margin: 0;
                 line-height: 50px;
                 text-align: center;
+                white-space: nowrap;
+            }
+
+            .syn-marquee-two .marquee-elements p,
+            .syn-marquee-three .marquee-elements p {
+                /* transform: translateX(100%); */
+                margin-right: 100px;
+                width: 100%;
+                display: inline-block;
+            }
+
+            .syn-marquee-two .marquee-elements p:last-child {
+                margin-right: 0;
             }
 
             .syn-marquee p {
                 transform:translateX(100%);
             }
 
-            .syn-marquee-two .marquee-elements {
-                transform: translateX(100%);
-            }
+            /* .syn-marquee-two .marquee-elements {
+                transform: translateX(0%);
+            } */
 
             .syn-marquee p:nth-of-type(1) {
                 animation: left-one 20s ease infinite;
@@ -60,7 +78,13 @@
             }
 
             .syn-marquee-two .marquee-elements {
-                animation: left-full 50s ease infinite;
+                display: flex;
+                animation: left-full 120s ease infinite;
+            }
+
+            .syn-marquee-three .marquee-elements {
+                display: flex;
+                animation: left-full 120s linear infinite;
             }
 
             @keyframes left-one {
@@ -104,7 +128,7 @@
                     transform:translateX(100%);
                 }
                 100%{
-                    transform:translateX(-100%);
+                    transform:translateX(-200%);
                 }
             }
 
@@ -127,6 +151,14 @@
                 <p>Select programs have been approved to restart. Please read about our current programs and safety guidelines.  Return To Play COVID-19 Guidelines.</p>
                 <p>Public Activities including Public Ice Skating are not available at this time.  Approved Programs.</p>
                 <p>Learn more about our new program which helps kids get physical and mental exercise in a safe environment.  Aviator Fit & Fun Program.</p>
+            </div>
+        </div>
+
+        <div class="syn-marquee-three" style="background-color: #f7c71d; color: #000; overflow: hidden;">
+            <div class="marquee-elements">
+                <p>AVIATOR ALERT: Select programs have been approved to restart. Please read about our current programs and safety guidelines.  Return To Play COVID-19 Guidelines.</p>
+                <p>AVIATOR ALERT: Public Activities including Public Ice Skating are not available at this time.  Approved Programs.</p>
+                <p>AVIATOR ALERT: Learn more about our new program which helps kids get physical and mental exercise in a safe environment.  Aviator Fit & Fun Program.</p>
             </div>
         </div>
 	</body>

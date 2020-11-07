@@ -19,14 +19,22 @@
                 margin: 25px auto;
                 -webkit-border-radius: 5px;
                 border-radius: 5px;
-                display: inline-block;
             }
 
             .syn-marquee-two {
                 margin-top: 50px;
+                width: 100%;
+                height: 50px;
+                margin: 25px auto;
+                overflow: hidden;
+                position: relative;
+                margin: 25px auto;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
             }
 
-            .syn-marquee p {
+            .syn-marquee p,
+            .syn-marquee-two p {
                 position: absolute;
                 font-family: Tahoma, Arial, sans-serif;
                 width: 100%;
@@ -38,6 +46,10 @@
 
             .syn-marquee p {
                 transform:translateX(100%);
+            }
+
+            .syn-marquee-two .marquee-elements {
+                transform: translateX(100%);
             }
 
             .syn-marquee p:nth-of-type(1) {

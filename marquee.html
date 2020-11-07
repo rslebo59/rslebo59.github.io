@@ -22,6 +22,10 @@
                 display: inline-block;
             }
 
+            .syn-marquee-two {
+                margin-top: 50px;
+            }
+
             .syn-marquee p {
                 position: absolute;
                 font-family: Tahoma, Arial, sans-serif;
@@ -41,6 +45,10 @@
             }
             .syn-marquee p:nth-of-type(2) {
                 animation: left-two 20s ease infinite;
+            }
+
+            .syn-marquee-two .marquee-elements {
+                animation: left-full 30s ease infinite;
             }
 
             @keyframes left-one {
@@ -78,6 +86,16 @@
                     transform:translateX(-100%);
                 }
             }
+
+            @keyframes left-full {
+                0% {
+                    transform:translateX(100%);
+                }
+                100%{
+                    transform:translateX(-100%);
+                }
+            }
+
         </style>
 	</head>
 
@@ -88,6 +106,16 @@
             <p>Select programs have been approved to restart. Please read about our current programs and safety guidelines.  Return To Play COVID-19 Guidelines.</p>
             <p>Public Activities including Public Ice Skating are not available at this time.  Approved Programs.</p>
             <p>Learn more about our new program which helps kids get physical and mental exercise in a safe environment.  Aviator Fit & Fun Program.</p>
+        </div>
+
+        <div class="syn-marquee syn-marquee-two" style="background-color: #f7c71d; color: #000;">
+            <div class="marquee-status">AVIATOR ALERT:</div>
+
+            <div class="marquee-elements">
+                <p>Select programs have been approved to restart. Please read about our current programs and safety guidelines.  Return To Play COVID-19 Guidelines.</p>
+                <p>Public Activities including Public Ice Skating are not available at this time.  Approved Programs.</p>
+                <p>Learn more about our new program which helps kids get physical and mental exercise in a safe environment.  Aviator Fit & Fun Program.</p>
+            </div>
         </div>
 	</body>
 </html>
